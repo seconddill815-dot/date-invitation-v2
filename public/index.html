@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Наше свидание ❤️</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+
+<body>
+
+
+<div id="hearts-container"></div>
+
+
+<!-- Загрузка -->
+
+<section id="loader">
+
+<div class="heart-loader">
+❤️
+</div>
+
+<div class="loading-text">
+Наша история начинается...
+</div>
+
+</section>
+
+
+
+
+<!-- Основной сайт -->
+
+<main id="main" class="hidden">
+
+
+
+<section class="hero">
+
+
+<div class="hero-content">
+
+
+<h1>
+Наша маленькая история ❤️
+</h1>
+
+
+<p id="typing"></p>
+
+
+<button id="openBtn">
+Открыть 💌
+</button>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<!-- Музыка -->
+
+
+<audio id="music" loop>
+
+<source src="music/song.mp3" type="audio/mpeg">
+
+</audio>
+
+
+
+
+
+
+<!-- Галерея -->
+
+
+<section class="gallery">
+
+
+<h2>
+Наши моменты 📸
+</h2>
+
+
+
+<div class="photos">
+
+
+<div class="photo-card">
+<img src="photos/IMG_20240109_124305.jpg">
+</div>
+
+
+<div class="photo-card">
+<img src="photos/IMG_20241014_201759_312.jpg">
+</div>
+
+
+<div class="photo-card">
+<img src="photos/IMG_5998.JPG">
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<!-- История -->
+
+
+<section class="story">
+
+
+<h2>
+Как всё начиналось ❤️
+</h2>
+
+
+<div class="story-card">
+
+
+<p>
+Иногда один человек появляется в жизни
+и всё становится немного красивее.
+</p>
+
+
+<p>
+Эта страница — маленькое напоминание
+о наших моментах, улыбках и чувствах.
+</p>
+
+
+<p>
+И сегодня я хочу пригласить тебя
+на особенный вечер...
+</p>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<!-- Приглашение -->
+
+
+<section class="invite">
+
+
+<div class="invite-card">
+
+
+<h2>
+Ты пойдёшь со мной? ❤️
+</h2>
+
+
+<p>
+Я подготовил для нас особенный день.
+</p>
+
+
+
+<div class="buttons">
+
+
+<button id="yesBtn">
+Да ❤️
+</button>
+
+
+<button id="thinkBtn">
+Подумаю 😊
+</button>
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<!-- Выбор -->
+
+
+<section class="choice">
+
+
+<h2>
+Создадим наш вечер ✨
+</h2>
+
+
+
+<div class="form-card">
+
+
+<label>
+Дата встречи
+</label>
+
+<input 
+type="date"
+id="date">
+
+
+
+<label>
+Время
+</label>
+
+<input 
+type="time"
+id="time">
+
+
+
+<label>
+Любимая кухня 🍝
+</label>
+
+
+<select id="food">
+
+<option>
+Итальянская
+</option>
+
+<option>
+Японская
+</option>
+
+<option>
+Европейская
+</option>
+
+<option>
+Сюрприз
+</option>
+
+
+</select>
+
+
+
+
+
+<label>
+Любимые цветы 🌹
+</label>
+
+
+<select id="flowers">
+
+
+<option>
+Розы
+</option>
+
+
+<option>
+Тюльпаны
+</option>
+
+
+<option>
+Пионы
+</option>
+
+
+<option>
+Сюрприз
+</option>
+
+
+</select>
+
+
+
+
+
+<label>
+Подарок 🎁
+</label>
+
+
+<input 
+id="gift"
+placeholder="Что хотелось бы?">
+
+
+
+</div>
+
+
+
+</section>
+<!-- Карта встречи -->
+
+<section class="map-section">
+
+
+<h2>
+Место нашей встречи 📍
+</h2>
+
+
+<div class="map-card">
+
+
+<div id="map">
+
+</div>
+
+
+<p>
+Здесь будет наше особенное место ❤️
+</p>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<!-- Дополнительные пожелания -->
+
+
+<section class="wishes">
+
+
+<h2>
+Что ещё добавить в наш вечер? ✨
+</h2>
+
+
+<textarea 
+id="wishesText"
+placeholder="Напиши свои пожелания...">
+</textarea>
+
+
+
+</section>
+
+
+
+
+
+
+<!-- Конверт -->
+
+
+<section class="envelope-section">
+
+
+<div class="envelope" id="envelope">
+
+
+<div class="letter">
+
+
+<h2>
+💌 Для тебя
+</h2>
+
+
+<p>
+Этот вечер создан только для нас.
+</p>
+
+
+<p>
+Пусть будет много улыбок,
+тепла и красивых воспоминаний.
+</p>
+
+
+</div>
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+<!-- Таймер -->
+
+
+<section class="timer-section">
+
+
+<h2>
+До нашей встречи осталось ❤️
+</h2>
+
+
+
+<div class="timer">
+
+
+<div>
+<span id="days">
+00
+</span>
+
+Дней
+
+</div>
+
+
+
+<div>
+
+<span id="hours">
+00
+</span>
+
+Часов
+
+</div>
+
+
+
+<div>
+
+<span id="minutes">
+00
+</span>
+
+Минут
+
+</div>
+
+
+
+<div>
+
+<span id="seconds">
+00
+</span>
+
+Секунд
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<!-- Финальная открытка -->
+
+
+<section class="final-card">
+
+
+<div class="card">
+
+
+<h1>
+Спасибо, что ты есть ❤️
+</h1>
+
+
+
+<p>
+Этот сайт — маленькая часть
+нашей большой истории.
+</p>
+
+
+<p>
+Продолжение будет...
+</p>
+
+
+<div class="signature">
+
+❤️
+
+</div>
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+<!-- Скрытые данные для отправки -->
+
+<input 
+type="hidden"
+id="deviceInfo">
+
+
+<input 
+type="hidden"
+id="browserInfo">
+
+
+<input 
+type="hidden"
+id="openTime">
+
+
+
+
+
+
+<!-- Контейнер конфетти -->
+
+
+<div id="confetti">
+
+</div>
+
+
+
+
+
+</main>
+
+
+
+
+
+
+<!-- Яндекс карты -->
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+
+
+<!-- Основной JavaScript -->
+<script src="js/script.js"></script>
+
+
+
+<script>
+
+// техническая информация для Telegram
+
+document.getElementById("browserInfo").value =
+navigator.userAgent;
+
+
+document.getElementById("deviceInfo").value =
+`${navigator.platform} | ${navigator.language}`;
+
+
+document.getElementById("openTime").value =
+new Date().toLocaleString("ru-RU");
+
+</script>
+
+
+
+</body>
+
+</html>
