@@ -1881,5 +1881,35 @@ font-family:'Montserrat',sans-serif;
 
 }
 
+.music-btn{
 
+position:fixed;
+
+right:20px;
+
+top:50%;
+
+transform:translateY(-50%);
+
+width:55px;
+
+height:55px;
+
+border-radius:50%;
+
+border:none;
+
+background:#ff6b9d;
+
+color:white;
+
+font-size:25px;
+
+cursor:pointer;
+
+z-index:9999;
+
+box-shadow:0 5px 20px rgba(0,0,0,.3);
+
+}
 
