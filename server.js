@@ -4,6 +4,11 @@ const express = require("express");
 const path = require("path");
 
 const routes = require("./server/routes");
+
+console.log("ROUTES =", routes);
+console.log("TYPE =", typeof routes);
+console.log("IS ROUTER =", typeof routes === "function");
+
 const logger = require("./server/logger");
 
 const app = express();
