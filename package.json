@@ -1,0 +1,47 @@
+{
+  "name": "date-invitation-v2",
+  "version": "1.0.0",
+  "description": "Romantic date invitation website with Telegram notifications",
+  "main": "server.js",
+
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+
+
+  "dependencies": {
+
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2"
+
+  },
+
+
+  "devDependencies": {
+
+    "nodemon": "^3.1.4"
+
+  },
+
+
+  "engines": {
+
+    "node": ">=18"
+
+  },
+
+
+  "keywords": [
+    "date",
+    "invitation",
+    "telegram",
+    "romantic",
+    "website"
+  ],
+
+
+  "author": "",
+  "license": "MIT"
+
+}
