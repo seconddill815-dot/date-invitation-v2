@@ -229,14 +229,15 @@ heart.remove();
 
 
 // ===============================
-// Конверт
+// Конверт "Для тебя ❤️"
 // ===============================
-
 
 
 const envelope =
 document.getElementById("envelope");
 
+
+let envelopeOpened = false;
 
 
 if(envelope){
@@ -252,8 +253,117 @@ envelope.classList.toggle(
 );
 
 
+// отправляем уведомление один раз
+
+if(!envelopeOpened){
+
+envelopeOpened = true;
+
+
+sendEnvelopeNotification();
+
+
+}
+
+
 });
 
+
+}
+
+
+
+
+// ===============================
+// Уведомление открытия конверта
+// ===============================
+
+
+async function sendEnvelopeNotification(){
+
+
+try{
+
+
+await fetch(
+"/api/date-response",
+{
+
+
+method:"POST",
+
+
+headers:{
+
+
+"Content-Type":
+"application/json"
+
+
+},
+
+
+body:JSON.stringify({
+
+
+date:"Конверт открыт ❤️",
+
+
+time:"Пользователь открыл письмо",
+
+
+food:"-",
+
+
+flowers:"-",
+
+
+gift:"-",
+
+
+wishes:"Она открыла конверт 💌",
+
+
+platform:navigator.platform,
+
+
+browser:navigator.userAgent,
+
+
+language:navigator.language,
+
+
+screen:
+`${window.innerWidth}x${window.innerHeight}`,
+
+
+opened:
+new Date().toLocaleString("ru-RU")
+
+
+})
+
+
+});
+
+
+console.log(
+"Конверт открыт — уведомление отправлено ❤️"
+);
+
+
+}
+
+catch(error){
+
+
+console.error(
+"Ошибка отправки:",
+error
+);
+
+
+}
 
 
 }
@@ -285,7 +395,6 @@ yesBtn.innerHTML =
 
 
 
-sendTelegramData();
 
 
 
