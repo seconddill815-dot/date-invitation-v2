@@ -1417,6 +1417,57 @@ console.log(
 
 }
 
+const music =
+document.getElementById("music");
 
+
+const musicToggle =
+document.getElementById("musicToggle");
+
+
+let musicOn = true;
+
+
+if(musicToggle && music){
+
+
+musicToggle.addEventListener(
+"click",
+()=>{
+
+
+if(musicOn){
+
+
+music.pause();
+
+
+musicToggle.innerHTML="🔇";
+
+
+musicOn=false;
+
+
+}
+
+else{
+
+
+music.play();
+
+
+musicToggle.innerHTML="🔊";
+
+
+musicOn=true;
+
+
+}
+
+
+});
+
+
+}
 
 loveMessage();
